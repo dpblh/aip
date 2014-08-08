@@ -1,4 +1,7 @@
 Aip::Application.routes.draw do
+  get "stackowerflow/search" => 'stackowerflow#search'
+  resources :stackoverflow, only: [:index, :show]
+  root 'stackoverflow#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

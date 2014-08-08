@@ -7,8 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+<div class="container">
+	<div class="navbar">
+		<div class="navbar-inner"><a href="/" class="brand"><h1>aip</h1></a></div>
+	</div>
+	<%= yield %>
+</div>
 
 </body>
 </html>

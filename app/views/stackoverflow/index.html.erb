@@ -1,0 +1,13 @@
+<%= form_tag({action: :index}, method: :get) do |f| %>
+	<%= label_tag(:inname, 'Search for:') %>
+	<%= text_field_tag(:inname) %>
+	<%= submit_tag('Search') %>
+<% end %>
+
+<ul>
+	<% @users.each do |user| %>
+		<li><%=link_to user['display_name'], stackoverflow_path(user['user_id']) %></li>
+	<% end %>
+</ul>
+
+<%= will_paginate @users, renderer: BootstrapPagination::Rails %>
