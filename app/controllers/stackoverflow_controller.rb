@@ -1,0 +1,2 @@
+class StackoverflowController < ApplicationController
+end
